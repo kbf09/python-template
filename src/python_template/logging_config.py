@@ -1,4 +1,8 @@
-import logging
+"""ロギング設定を提供するモジュール。
+
+このモジュールは、アプリケーション全体のロギング設定を管理します。
+"""
+
 from pathlib import Path
 from typing import Optional
 from logging.config import dictConfig
@@ -6,12 +10,11 @@ import yaml
 
 
 def setup_logging(verbose: int = 0, log_file: Optional[str] = None) -> None:
-    """
-    ロギングを設定する
+    """ロギングを設定します。
 
     Args:
-        verbose (int): 冗長性レベル (0: WARNING, 1: INFO, 2: DEBUG)
-        log_file (str, optional): ログファイルのパス
+        verbose: 冗長性レベル (0: WARNING, 1: INFO, 2: DEBUG)
+        log_file: ログファイルのパス
     """
     # ログレベルの設定
     level = {
@@ -21,7 +24,7 @@ def setup_logging(verbose: int = 0, log_file: Optional[str] = None) -> None:
     }.get(verbose, "DEBUG")
 
     # 基本設定の読み込み
-    config_path = Path(__file__).parent.parent / "config" / "logging.yaml"
+    config_path = Path(__file__).parent.parent.parent / "config" / "logging.yaml"
     with open(config_path, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
 

@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-python-template = "python_template:main"
+python-template = "python_template.__main__:main"
 
 [build-system]
 requires = ["hatchling"]
