@@ -1,5 +1,3 @@
-import sys
-
 import logging
 import argparse
 from logging_config import setup_logging
