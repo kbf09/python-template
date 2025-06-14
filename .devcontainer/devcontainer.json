@@ -45,7 +45,7 @@
 		}
 	},
 	"onCreateCommand": "echo 'eval \"$(uv generate-shell-completion bash)\"' >> ~/.bashrc",
-	"postCreateCommand": "uv venv --allow-existing && uv sync --frozen",
+	"postCreateCommand": "uv venv --allow-existing && uv sync",
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "root"
