@@ -36,3 +36,11 @@ VSCode + devcontainer + uv + ruffを使い、できるだけシンプルな構�
 3. vscode右下の「><」マークから 「コンテナーで再度開く」
 4. 開いたら開発する
 5. sudo docker build . -t hogehogeでメインのコンテナをビルドできる
+
+## 使う
+
+本テンプレートはcopierに対応している
+
+`uv tool install copier`
+
+`copier copy gh:kbf09/python-template /path/to/project`

@@ -6,13 +6,13 @@
 
 import logging
 import argparse
-from python_template.logging_config import setup_logging
+from {{project_name}}.logging_config import setup_logging
 
 
 def main() -> None:
     """コマンドライン引数を解析し、アプリケーションを実行します。"""
     parser = argparse.ArgumentParser(
-        description="Pythonテンプレートアプリケーション",
+        description="{{project_name}}",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
